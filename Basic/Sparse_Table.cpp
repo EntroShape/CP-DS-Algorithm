@@ -19,8 +19,8 @@ int main(){
     while(m--){//给定闭区间，给出最大值
         int l,r;
         cin>>l>>r;        
-        int k=log2(l-r+1);
-        cout<<max(f[l][k],f[r-l+1][k])<<endl;//
+        int k=log2(r-l+1);
+        cout<<max(f[l][k],f[r-(1<<k)+1][k])<<endl;//
     }
     
     return 0;   
